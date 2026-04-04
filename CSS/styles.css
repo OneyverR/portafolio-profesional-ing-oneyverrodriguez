@@ -625,7 +625,7 @@ ul {
 }
 
 .skill__progress--html {
-    width: 75%;
+    width: 100%;
     border-radius: 8px;
 }
 
@@ -866,13 +866,14 @@ a:active {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
     background: linear-gradient(
             135deg,
             rgba(255, 255, 255, 0.1) 0%,
             rgba(255, 255, 255, 0) 100%
     );
+    pointer-events: none;
 }
 
 .hero__title {
@@ -886,6 +887,272 @@ a:active {
 
 .hero__description {
     color: rgba(255, 255, 255, 0.95);
-    background-color: green;
 }
 
+.stat__number {
+    color: var(--color-whithe) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stat__label {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===========================================
+     22. BOTONES CON SOMBRAS - MÓDULO 3
+     =========================================== */
+
+.button {
+    /*sombra*/
+    box-shadow: var(--shadow-md);
+}
+
+.button:hover {
+    /*Sombras mas grande en Hover*/
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.button--primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    /*Degradado Sutil*/
+    background-image: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.button--primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.botton--secondary {
+    background-color: var(--color-whithe);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* ===========================================
+     23. CARDS CON SOMBRAS - MÓDULO 3
+     =========================================== */
+
+.project {
+    box-shadow: var(--shadow-md);
+    border: none;
+}
+
+.project:hover {
+    /*Sombra mas grande en Hover*/
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-4px);
+}
+
+.project--featured {
+    /*Nuevo degradado en borde*/
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white), var(--gradient-primary);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.project__badge {
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-md);
+}
+
+/* ===========================================
+     24. TAGS CON COLORES - MÓDULO 3
+     =========================================== */
+
+.tag {
+    background: linear-gradient(
+            135deg,
+            #ddd6fe 0%,
+            #c4b5fd 100%
+    );
+    color: var(--color-primary-dark);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ===========================================
+     25. QUOTE CON ESTILO - MÓDULO 3
+     =========================================== */
+
+.quote {
+    background: linear-gradient(
+            135deg,
+            var(--color-light) 0%,
+            var(--color-lighter) 100%
+    );
+    border-left: 4px solid var(--color-primary);
+    box-shadow: var(--shadow-md);
+}
+
+/* ===========================================
+     26. VALUES CON COLORES - MÓDULO 3
+     =========================================== */
+
+.values__item {
+    background: var(--color-whithe);
+    border: 1px solid var(--color-gray-lighter);
+    box-shadow: var(--shadow-sm);
+}
+
+.values__item:hover {
+    background: linear-gradient(
+            135deg,
+            var(--color-whithe) 0%,
+            var(--color-lighter) 100%
+    );
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+/* ===========================================
+     27. SKILL BARS CON DEGRADADOS - MÓDULO 3
+     =========================================== */
+
+.skill__bar {
+    background-color: var(--color-gray-lighter);
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill__progress {
+    background: linear-gradient(
+            90deg,
+            var(--color-primary) 0%,
+            var(--color-primary-light) 100%
+    );
+    box-shadow: var(--shadow-md);
+}
+
+.skill__progress--html {
+    background: linear-gradient(
+            90deg,
+            #f97316 0%,
+            #fb923c 100%
+    );
+}
+
+.skill__progress--css {
+    background: linear-gradient(
+            90deg,
+            #06b6d4 0%,
+            #22d3ee 100%
+    );
+}
+
+.skill__progress--js {
+    background: linear-gradient(
+            90deg,
+            #fbbf24 0%,
+            #fde047 100%
+    );
+}
+
+/* ===========================================
+     28. LEARNING SECTION - MÓDULO 3
+     =========================================== */
+
+.learning {
+    background: linear-gradient(
+            135deg,
+            var(--color-light) 0%,
+            var(--color-whithe) 100%
+    );
+    border-radius: 25px;
+    box-shadow: var(--shadow-md);
+}
+
+/* ===========================================
+     29. CONTACT SECTION - MÓDULO 3
+     =========================================== */
+
+.contact {
+    background: linear-gradient(
+            135deg,
+            #fef3c7 0%,
+            #fde68a 50%,
+            #c4b5fd 100%
+    );
+}
+
+.contact__method {
+    background: var(--color-whithe);
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+}
+
+.contact__method:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-8px);
+}
+
+/* ===========================================
+     30. HEADER CON SOMBRA - MÓDULO 3
+     =========================================== */
+
+.header {
+    background: var(--color-whithe);
+    border-bottom: none;
+    box-shadow: var(--shadow-md);
+}
+
+.nav__link {
+    color: var(--color-gray-dark);
+    border-radius: 15px;
+    /*border: 2px solid gray; !*Provisional*!*/
+}
+
+.nav__link:hover {
+    color: var(--color-primary);
+    background: var(--color-lighter);
+}
+
+.nav__link--active {
+    color: var(--color-whithe);
+    background: var(--gradient-primary);
+    padding: 8px 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+/* ===========================================
+     31. FOOTER CON DEGRADADO - MÓDULO 3
+     =========================================== */
+
+.footer {
+    background: linear-gradient(
+            200deg,
+            #4c1d95 0%,
+            #5b21b6 50%,
+            #06b6d4 100%
+    );
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.footer__link:hover {
+    color: var(--color-primary-light);
+}
+
+/* ===========================================
+     32. SECTIONS CON BORDES REDONDEADOS - MÓDULO 3
+     =========================================== */
+
+.about__container, .projects__container, .skills__container, .contact__container {
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.projects {
+    background: linear-gradient(
+            135deg,
+            #f9fafb 0%,
+            #ede9fe 100%
+    );
+}
