@@ -67,7 +67,7 @@ h4 {
 
 p {
     font-family: "Urbanist", sans-serif;
-    margin-bottom: 16px;
+    margin-bottom: 1.25rem;
     /*Limite de Ancho para mejorar legibilidad*/
     max-width: 70ch;
 }
@@ -79,6 +79,14 @@ strong {
 
 em {
     font-style: italic;
+}
+
+/* NUEVO: Párrafos introductorios más grandes */
+.about__intro,
+.hero__description {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.8;
+    color: #555555;
 }
 
 /* ===========================================
@@ -201,7 +209,7 @@ ul {
 .hero {
     padding: 64px 0;
     text-align: center;
-    background: #f0f4f8;
+    background-color: #f0f4f8;
     margin-bottom: 48px;
 }
 
@@ -341,7 +349,7 @@ ul {
 }
 
 .about__intro {
-    font-size: 1.2rem; /*20px*/
+    font-size: 1.25rem; /* 20px */
     text-align: center;
     color: #333333;
     margin-bottom: 1.5rem;
@@ -457,12 +465,12 @@ ul {
 
 .projects__description {
     text-align: center;
-    font-size: 1.0625rem;
     color: #666666;
     margin-bottom: 3rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 1.0625rem;
     line-height: 1.7;
 }
 
@@ -689,12 +697,12 @@ ul {
 }
 
 .contact__description {
-    font-size: 1.0625rem;
     color: #666666;
     margin-bottom: 3rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 1.0625rem;
     line-height: 1.7;
 }
 
@@ -765,9 +773,8 @@ ul {
 
 .footer__credits {
     color: #9ca3af;
-    font-size: 14px;
-    margin: 0 auto;
-    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.5;
 }
 
 /* ===========================================
@@ -795,35 +802,44 @@ ul {
     --color-gray-lighter: #e5e7eb;
     --color-light: #f9fafb;
     --color-lighter: #fef3c7;
-    --color-whithe: #ffffff;
+    --color-white: #ffffff;
 
     /*Colores de Acento*/
     --color-accent: #f59e0b;
     --color-accent-light: #fbbf24;
 
-    /*Sombras*/
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 1px 2px rgba(0, 0, 0, 0.01), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    /* Sombras */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
-    /*Degradados mas Vibrantes*/
+    /* Degradados - Más vibrantes y luminosos */
     --gradient-primary: linear-gradient(
             135deg,
             #8b5cf6 0%,
             #06b6d4 100%
-    );
+    ); /* Púrpura a cyan */
     --gradient-hero: linear-gradient(
             135deg,
             #a78bfa 0%,
             #5b21b6 50%,
             #06b6d4 100%
-    );
-    --gradient-accenter: linear-gradient(
+    ); /* Degradado tricolor */
+    --gradient-accent: linear-gradient(
             135deg,
             #fbbf24 0%,
             #f59e0b 100%
-    );
+    ); /* Dorado */
+
+    /* Border radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-full: 9999px;
 }
 
 /* ===========================================
@@ -832,7 +848,7 @@ ul {
 
 body {
     color: var(--color-gray-dark);
-    background-color: var(--color-whithe);
+    background-color: var(--color-white);
 }
 
 h1, h2, h3, h4 {
@@ -877,11 +893,11 @@ a:active {
 }
 
 .hero__title {
-    color: var(--color-whithe);
+    color: var(--color-white);
 }
 
 .hero__subtitle {
-    color: var(--color-whithe);
+    color: var(--color-white);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -890,7 +906,7 @@ a:active {
 }
 
 .stat__number {
-    color: var(--color-whithe) !important;
+    color: var(--color-white);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -905,6 +921,7 @@ a:active {
 .button {
     /*sombra*/
     box-shadow: var(--shadow-md);
+
 }
 
 .button:hover {
@@ -930,7 +947,7 @@ a:active {
 }
 
 .botton--secondary {
-    background-color: var(--color-whithe);
+    background-color: var(--color-white);
     color: var(--color-primary);
     border-color: var(--color-primary);
 }
@@ -996,7 +1013,7 @@ a:active {
      =========================================== */
 
 .values__item {
-    background: var(--color-whithe);
+    background: var(--color-white);
     border: 1px solid var(--color-gray-lighter);
     box-shadow: var(--shadow-sm);
 }
@@ -1004,7 +1021,7 @@ a:active {
 .values__item:hover {
     background: linear-gradient(
             135deg,
-            var(--color-whithe) 0%,
+            var(--color-white) 0%,
             var(--color-lighter) 100%
     );
     border-color: var(--color-primary);
@@ -1060,11 +1077,7 @@ a:active {
      =========================================== */
 
 .learning {
-    background: linear-gradient(
-            135deg,
-            var(--color-light) 0%,
-            var(--color-whithe) 100%
-    );
+    background: var(--color-gray-lighter);
     border-radius: 25px;
     box-shadow: var(--shadow-md);
 }
@@ -1083,7 +1096,7 @@ a:active {
 }
 
 .contact__method {
-    background: var(--color-whithe);
+    background: var(--color-white);
     padding: 1.5rem;
     border-radius: 20px;
     box-shadow: var(--shadow-md);
@@ -1099,7 +1112,7 @@ a:active {
      =========================================== */
 
 .header {
-    background: var(--color-whithe);
+    background: var(--color-white);
     border-bottom: none;
     box-shadow: var(--shadow-md);
 }
@@ -1116,7 +1129,7 @@ a:active {
 }
 
 .nav__link--active {
-    color: var(--color-whithe);
+    color: var(--color-white);
     background: var(--gradient-primary);
     padding: 8px 16px;
     box-shadow: var(--shadow-sm);
@@ -1155,4 +1168,342 @@ a:active {
             #f9fafb 0%,
             #ede9fe 100%
     );
+}
+
+/*
+  ╔═══════════════════════════════════════════════════════════════════════════╗
+  ║                                                                           ║
+  ║  MÓDULO 4: CÓDIGO NUEVO - FLEXBOX Y CSS GRID                            ║
+  ║  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ║
+  ║  A partir de aquí todo es código NUEVO del Módulo 4                     ║
+  ║                                                                           ║
+  ╚═══════════════════════════════════════════════════════════════════════════╝
+  */
+
+/* ===========================================
+     33. HEADER CON FLEXBOX - NUEVO MÓDULO 4
+     =========================================== */
+
+.header__container {
+    /* NUEVO: Flexbox para header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header__brand {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.nav {
+    text-align: left;
+}
+
+.nav__list {
+    /*Felxbox para navegacion*/
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav__item {
+    display: block;
+    margin: 0;
+}
+
+/* ===========================================
+     34. HERO CON FLEXBOX - MÓDULO 4
+     =========================================== */
+
+.hero__container {
+    /*Flexbox para centrar contenido*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    gap: 2rem;
+}
+
+.hero__actions {
+    /*Flexbox Para botones*/
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.hero__stats {
+    /*Felxbox para estadisticas*/
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+/* ===========================================
+     35. ABOUT SECTION CON GRID - MÓDULO 4
+     =========================================== */
+
+.about__container {
+    display: grid;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.values__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 0;
+}
+
+.values__item {
+    /*Felxbox en columna para mejorar legibilidad*/
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.values__icon {
+    /*Icono centrado arriba*/
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+/*Titulo del Valor*/
+.values__item strong {
+    display: block;
+    margin: 0;
+    font-size: 1.125rem;
+}
+
+/*Descripcion del valor*/
+.values__item span:last-child {
+    display: block;
+    line-height: 1.5;
+}
+
+/* ===========================================
+     36. PROJECTS CON GRID - MÓDULO 4
+     =========================================== */
+
+.projects__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 20px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.project__description {
+    flex-grow: 1;
+}
+
+.project__technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    margin-right: 0;
+}
+
+.project__links {
+    display: flex;
+    gap: 1rem;
+}
+
+/* ===========================================
+     37. SKILLS CON GRID - MÓDULO 4
+     =========================================== */
+
+.skills__list {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.skill {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.skill__name {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 0;
+}
+
+.skill__percentage {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+}
+
+.skill__bar {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-bottom: 0;
+}
+
+.learning__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* ===========================================
+     38. CONTACT CON FLEXBOX - MÓDULO 4
+     =========================================== */
+
+.contact__methods {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.contact__method {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    min-width: 200px;
+}
+
+/* ===========================================
+     39. FOOTER CON FLEXBOX - MÓDULO 4
+     =========================================== */
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer__nav {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.footer__link {
+    margin: 0;
+}
+
+/* ===========================================
+     40. MEJORAS GENERALES CON FLEXBOX/GRID - MÓDULO 4
+     =========================================== **/
+
+/*Centrar el contenido Principal*/
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/*Mejorar el espaciado de las secciones*/
+section {
+    /* Ya no necesitamos margin-bottom */
+    margin-bottom: 0;
+}
+
+/*Boton con mejor alineacion*/
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.quote {
+    display: grid;
+    gap: 1rem;
+}
+
+/* ===========================================
+     41. PROYECTO DESTACADO CON GRID - MÓDULO 4
+     =========================================== */
+
+.project--featured {
+    grid-column: span 2;
+}
+
+/* Si solo hay 2 proyectos, no hacer span */
+.projects__grid:has(.project:nth-child(2):last-child) .project--featured {
+    grid-column: span 1;
+}
+
+/* ===========================================
+     42. OPTIMIZACIONES FINALES - MÓDULO 4
+     =========================================== */
+
+h2 {
+    margin-top: 0;
+}
+
+.about__intro,
+.about__text {
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70ch;
+}
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+/* Contenedores con max-width consistente */
+.header__container,
+.hero__container,
+.about__container,
+.projects__container,
+.skills__container,
+.contact__container,
+.footer__container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
