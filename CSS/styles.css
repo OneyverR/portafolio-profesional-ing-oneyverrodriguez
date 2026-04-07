@@ -920,8 +920,7 @@ a:active {
 
 .button {
     /*sombra*/
-    box-shadow: var(--shadow-md);
-
+    box-shadow: var(--shadow-md)
 }
 
 .button:hover {
@@ -1119,7 +1118,7 @@ a:active {
 
 .nav__link {
     color: var(--color-gray-dark);
-    border-radius: 15px;
+    border-radius: 8px;
     /*border: 2px solid gray; !*Provisional*!*/
 }
 
